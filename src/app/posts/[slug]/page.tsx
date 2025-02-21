@@ -1,5 +1,12 @@
-import { getPostBySlug } from "@/app/lib/api";
-import markdownToHtml from "@/app/lib/markdownToHtml";
+import { getPostBySlug, getPostSlugs } from "@/app/lib/api";
+
+export async function generateStaticParams() {
+  const slugs = getPostSlugs();
+
+  return slugs.map((slug) => ({
+    slug
+  }));
+}
 
 export default async function Post(props: Params) {
   const { slug } = await props.params;
@@ -15,6 +22,7 @@ export default async function Post(props: Params) {
 type Params = {
   // why this must include Promise?
   // https://nextjs.org/docs/messages/sync-dynamic-apis
+  // https://nextjs.org/docs/app/api-reference/functions/generate-static-params
   params: Promise<{
     slug: string;
   }>;
