@@ -1,6 +1,13 @@
 import { Fragment } from "react";
 
+import { getAllPosts } from "./lib/api";
+import Link from "next/link";
+
 export default function Home() {
+  const posts = getAllPosts()
+
+  console.log(posts)
+
   return (
     <div className="container mx-auto py-10">
       <header>
@@ -17,10 +24,11 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center justify-between p-12">
         <div className="mb-32 text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
           <ul className="max-w-md space-y-1 text-gray-900 list-none list-inside dark:text-gray-300">
-            {[...Array(5)].map((_, i) => (
+            {posts.map((post, i) => (
               <Fragment key={i}>
                 <li className="py-5">
-                  <a href="">SRE</a>
+                  <Link href={`posts/${post}`}>{post}</Link>
+                  {/* <a href={`/postspost`}>{post}</a> */}
                 </li>
                 <hr></hr>
               </Fragment>
