@@ -15,7 +15,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <p>Development, SRE and fun.</p>
             <div className="justify-evenly flex w-56">
-              <p>iuuukhueeee</p>
+              <Link href="https://x.com/iuuukhueeee">iuuukhueeee</Link>
               <a href="#">Yusou 🚚</a>
             </div>
           </div>
