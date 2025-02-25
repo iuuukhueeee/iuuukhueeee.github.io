@@ -1,4 +1,6 @@
 import { getPostBySlug, getPostSlugs } from "@/app/lib/api";
+import markdownStyles from "./markdown-styles.module.css";
+
 
 export async function generateStaticParams() {
   const slugs = getPostSlugs();
@@ -14,7 +16,7 @@ export default async function Post(props: Params) {
   const post = await getPostBySlug(slug);
   return (
     <div className="flex justify-center items-center mt-20 max-w-2xl mx-auto">
-      <div dangerouslySetInnerHTML={{ __html: post }}></div>
+      <div className={markdownStyles['markdown']} dangerouslySetInnerHTML={{ __html: post }}></div>
     </div>
   );
 }
