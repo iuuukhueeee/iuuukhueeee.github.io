@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
-      <Script defer src="/scripts.js" data-website-id="833cb692-88c7-467a-8cf7-ffec21b39bd4" />
+      <Script defer src="/stats/script.js" data-website-id="833cb692-88c7-467a-8cf7-ffec21b39bd4" />
     </html>
   );
 }
