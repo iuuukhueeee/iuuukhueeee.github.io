@@ -3,7 +3,7 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        "source": "/umami.js",
+        "source": "/scripts.js",
         "destination": "https://cloud.umami.is/script.js"
       },
       {
