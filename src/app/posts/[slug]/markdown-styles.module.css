@@ -9,6 +9,12 @@
   @apply my-4;
 }
 
+.markdown h1 {
+  font-size: 3em;
+  color: #FDB7EA;
+  @apply font-bold
+}
+
 .markdown h2 {
   @apply text-3xl mt-12 mb-4 leading-snug;
 }
