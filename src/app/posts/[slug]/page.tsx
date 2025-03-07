@@ -1,6 +1,7 @@
 import { getPostBySlug, getPostSlugs } from "@/app/lib/api";
 import markdownStyles from "./markdown-styles.module.css";
 import { Inter } from "next/font/google";
+import 'github-markdown-css/github-markdown-dark.css'
 
 const inter = Inter({ subsets: ["latin"], weight: ["700"], style: ["normal"] });
 
@@ -18,11 +19,14 @@ export default async function Post(props: Params) {
   const post = await getPostBySlug(slug);
   return (
     <div className={"flex justify-center items-center mt-20 mx-6 md:mx-20" + inter.className}>
-      <div className="max-w-2xl">
-        <div
+      <div className="max-w-6xl">
+        {/* <div
           className={markdownStyles["markdown"]}
           dangerouslySetInnerHTML={{ __html: post }}
-        ></div>
+        ></div> */}
+        <div className={['markdown-body', markdownStyles["markdown"]].join(' ')}>
+          {post}
+        </div>
       </div>
     </div>
   );
