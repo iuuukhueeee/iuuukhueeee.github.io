@@ -5,7 +5,14 @@ import markdownToHtml from './markdownToHtml'
 const postsDicr = join(process.cwd(), "posts")
 
 export function getPostSlugs() {
-  return fs.readdirSync(postsDicr)
+  let files = fs.readdirSync(postsDicr)
+
+  files.sort((a, b) => {
+    return fs.statSync(postsDicr + '/' + b).mtime.getTime() - fs.statSync(postsDicr + '/' + a).mtime.getTime()
+  })
+
+  return files
+
 }
 
 export async function getPostBySlug(slug: string) {
