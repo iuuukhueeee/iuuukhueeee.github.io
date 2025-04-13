@@ -1,3 +1,11 @@
+---
+title: Release Yusou v1.0-rc2
+description: Release Yusou v1.0-rc2
+createdAt: 1741622100
+updatedAt: 1741622100
+slug: release-yusou-v1.0-rc2
+---
+
 # Yusou v1.0-rc2
 
 _2025-03-10_

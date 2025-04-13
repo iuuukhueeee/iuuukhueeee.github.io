@@ -1,5 +1,14 @@
+---
+title: How telemetry and logs are important
+description: How telemetry and logs are important
+createdAt: 1740587280
+updatedAt: 1740587280
+slug: how-telemetry-and-logs-are-important
+---
+
 # How telemetry and logs are important
-*2025-02-26*
+
+_2025-02-26_
 
 Our oldest, latest app somehow hits its highest spike ever on a production database. Why? We don’t know. After we upgraded our database to postgres v16, it got the spike that never happened before.
 
