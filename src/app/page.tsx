@@ -15,8 +15,8 @@ export default function Home() {
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <p>Development, SRE and fun.</p>
             <div className="justify-evenly flex w-56">
-              <Link href="https://x.com/iuuukhueeee">iuuukhueeee</Link>
-              <a href="#">Yusou 🚚</a>
+              <Link href="https://x.com/iuuukhueeee" prefetch>iuuukhueeee</Link>
+              <Link href="https://yusou.vercel.app" prefetch>Yusou 🚚</Link>
             </div>
           </div>
         </nav>
