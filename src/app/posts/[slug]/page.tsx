@@ -9,7 +9,7 @@ export async function generateStaticParams() {
   const slugs = getPostSlugs();
 
   return slugs.map((slug) => ({
-    slug,
+    slug: slug.filename,
   }));
 }
 

@@ -27,7 +27,7 @@ export default function Home() {
             {posts.map((post, i) => (
               <Fragment key={i}>
                 <li className="py-5">
-                  <Link href={`posts/${post}`}>{post}</Link>
+                  <Link href={`posts/${post.filename}`}>{post.title}</Link>
                   {/* <a href={`/postspost`}>{post}</a> */}
                 </li>
                 <hr></hr>

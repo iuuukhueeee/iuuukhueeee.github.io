@@ -17,13 +17,14 @@ export function getPostSlugs() {
 
     return {
       filename: filename,
+      title: data.title,
       date: data.createdAt ? new Date(data.createdAt) : new Date(0)
     }
   })
 
   posts.sort((a, b) => b.date.getTime() - a.date.getTime());
 
-  return posts.map(post => post.filename)
+  return posts
 
 }
 
