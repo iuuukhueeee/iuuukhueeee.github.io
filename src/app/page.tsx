@@ -14,9 +14,10 @@ export default function Home() {
         <nav className=" px-4 lg:px-6 py-2.5">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <p>Development, SRE and fun.</p>
-            <div className="justify-evenly flex w-56">
+            <div className="gap-7 flex">
               <Link href="https://x.com/iuuukhueeee" prefetch>iuuukhueeee</Link>
               <Link href="https://yusou.vercel.app" prefetch>Yusou 🚚</Link>
+              <Link href="/about" prefetch>About</Link>
             </div>
           </div>
         </nav>
