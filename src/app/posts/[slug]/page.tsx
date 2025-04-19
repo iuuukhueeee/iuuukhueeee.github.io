@@ -19,14 +19,14 @@ export default async function Post(props: Params) {
   const post = await getPostBySlug(slug);
   return (
     <div className={"flex justify-center items-center my-20 mx-6 md:mx-20" + inter.className}>
-      <div className="max-w-6xl">
+      <div className="w-full max-w-prose md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
         {/* <div
           className={markdownStyles["markdown"]}
           dangerouslySetInnerHTML={{ __html: post }}
         ></div> */}
-        <div className={['markdown-body', markdownStyles["markdown"]].join(' ')}>
+        <article className={['markdown-body', markdownStyles["markdown"]].join(' ')}>
           {post}
-        </div>
+        </article>
       </div>
     </div>
   );
