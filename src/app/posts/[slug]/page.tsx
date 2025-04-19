@@ -18,7 +18,7 @@ export default async function Post(props: Params) {
 
   const post = await getPostBySlug(slug);
   return (
-    <div className={"flex justify-center items-center mt-20 mx-6 md:mx-20" + inter.className}>
+    <div className={"flex justify-center items-center my-20 mx-6 md:mx-20" + inter.className}>
       <div className="max-w-6xl">
         {/* <div
           className={markdownStyles["markdown"]}
