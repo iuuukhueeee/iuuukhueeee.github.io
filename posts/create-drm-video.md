@@ -219,6 +219,27 @@ For `Amazon Resource Name (ARN)` paste in your S3 ARN. Then click Add Statement 
 
 Now we can verify the web by making a request to `http://iuuukhueeee-drm-demo.s3-website-ap-southeast-1.amazonaws.com/h264.mpd`. Spoiler alert, it worked.
 
+Now let's update the CORS, at the bottom of the screen, you'll see the CORS settings.
+
+```json
+[
+    {
+        "AllowedHeaders": [
+            "*"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+]
+```
+
+The json above said we're allowing anywhere in the world to make a request to our S3. This sounds a bit odd because we're opening to the world. Yes, it is. This is not security and I do not recommend doing this. This is only for demo purpose.
+
 # Step 4: Configure CloudFront
 
 CloudFront is used to serve the video content over HTTPS (S3 only serve HTTP). HTTPS is essential because secure communication is required when the Shaka Player contacts the Widevine license server to obtain decryption keys.
@@ -231,9 +252,9 @@ For `Web Application Firewall (WAF)` because this is a simple demo, I will not e
 
 ![Cloudfront Setup](/images/Cloudfront%20setup.png)
 
-# Step 4: Make a website
+# Step 5: Make an app
 
-While the Cloudfront is deploying, let's create our website.
+While the Cloudfront is deploying, let's create our app.
 
 I'll use Vite to create a React app. You can use other libraries like Angular or Vue, but the principle stay the same.
 
@@ -361,7 +382,7 @@ yarn build
 
 The output files will store in `dist/` folder.
 
-# Upload the app to S3
+# Step 6: Upload the app to S3
 
 Go to the S3 bucket and click on `Upload`
 
