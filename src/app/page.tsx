@@ -4,39 +4,24 @@ import { getAllPosts } from "./lib/api";
 import Link from "next/link";
 
 export default function Home() {
-  const posts = getAllPosts()
-
-  console.log(posts)
+  const posts = getAllPosts();
 
   return (
-    <div className="container mx-auto py-10">
-      <header>
-        <nav className=" px-4 lg:px-6 py-2.5">
-          <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <p>Development, SRE and fun.</p>
-            <div className="gap-7 flex">
-              <Link href="https://x.com/iuuukhueeee" prefetch>iuuukhueeee</Link>
-              <Link href="https://yusou.vercel.app" prefetch>Yusou 🚚</Link>
-              <Link href="/about" prefetch>About</Link>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <main className="flex min-h-screen flex-col items-center justify-between p-12">
-        <div className="mb-32 text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+    <div className="container mx-auto">
+      <main className="flex flex-col items-center justify-between m-12">
+        <div className="text-center lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
           <ul className="max-w-md space-y-1 text-gray-900 list-none list-inside dark:text-gray-300">
             {posts.map((post, i) => (
               <Fragment key={i}>
                 <li className="py-5">
                   <Link href={`posts/${post.filename}`}>{post.title}</Link>
-                  {/* <a href={`/postspost`}>{post}</a> */}
                 </li>
                 <hr></hr>
               </Fragment>
             ))}
           </ul>
         </div>
-        <div className="inline-flex items-center justify-center w-full">
+        <div className="inline-flex items-center justify-center w-full mt-10">
           <hr className="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700" />
           <div className="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
             <svg
