@@ -1,7 +1,11 @@
-import { getPostBySlug, getPostSlugs } from "@/app/lib/api";
+import {
+  getPostBySlug,
+  getPostBySlugWithMetadata,
+  getPostSlugs,
+} from "@/app/lib/api";
 import markdownStyles from "./markdown-styles.module.css";
 import { Inter } from "next/font/google";
-import 'github-markdown-css/github-markdown-dark.css'
+import "github-markdown-css/github-markdown-dark.css";
 
 const inter = Inter({ subsets: ["latin"], weight: ["700"], style: ["normal"] });
 
@@ -18,13 +22,19 @@ export default async function Post(props: Params) {
 
   const post = await getPostBySlug(slug);
   return (
-    <div className={"flex justify-center items-center my-20 mx-6 md:mx-20" + inter.className}>
+    <div
+      className={
+        "flex justify-center items-center my-20 mx-6 md:mx-20" + inter.className
+      }
+    >
       <div className="w-full max-w-prose md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
         {/* <div
           className={markdownStyles["markdown"]}
           dangerouslySetInnerHTML={{ __html: post }}
         ></div> */}
-        <article className={['markdown-body', markdownStyles["markdown"]].join(' ')}>
+        <article
+          className={["markdown-body", markdownStyles["markdown"]].join(" ")}
+        >
           {post}
         </article>
       </div>
@@ -40,3 +50,14 @@ type Params = {
     slug: string;
   }>;
 };
+
+export async function generateMetadata(props: Params) {
+  const { slug } = await props.params;
+
+  const metadata = await getPostBySlugWithMetadata(slug);
+
+  return {
+    title: metadata.title,
+    description: metadata.description,
+  };
+}
