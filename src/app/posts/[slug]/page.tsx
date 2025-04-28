@@ -57,7 +57,7 @@ export async function generateMetadata(props: Params) {
   const metadata = await getPostBySlugWithMetadata(slug);
 
   return {
-    title: metadata.title,
+    title: `${metadata.title} —— iuuukhueeee`,
     description: metadata.description,
   };
 }
