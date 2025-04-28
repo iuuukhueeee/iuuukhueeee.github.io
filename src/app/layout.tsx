@@ -9,6 +9,21 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Duc Thien's blog",
   description: "Personal blogs about software development, SRE and fun.",
+  authors: [{ name: "iuuukhueeee", url: "https://iuuukhueeee.vercel.app" }],
+  creator: "iuuukhueeee",
+  publisher: "iuuukhueeee",
+  keywords: [
+    "AWS",
+    "Amazon Web Services",
+    "VPC",
+    "Networking",
+    "React Native",
+    "Expo",
+    "Xcode",
+    "Typescript",
+    "React",
+    "JavaScript",
+  ],
 };
 
 export default function RootLayout({
