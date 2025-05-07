@@ -2,7 +2,7 @@
 title: Create DRM video
 description: Create DRM video
 createdAt: 1745074766
-updatedAt: 1745074766
+updatedAt: 1746633153
 slug: create-drm-video
 ---
 
@@ -13,7 +13,7 @@ and distributing copyrighted contents. Multiple big companies are developing the
 
 # Quick Overview
 
-This blog will solely focus on DASH (DASH Adaptive Streaming for HTML). We will make a DRM video with adaptive bitrate using `ffmpeg`, and `shaka packager` and `skaka player` for streaming where the player switches between resolutions based on network conditions.
+This blog will solely focus on DASH (DASH Adaptive Streaming for HTML). We will make a DRM video with adaptive bitrate using `ffmpeg`, and `shaka packager` and `shaka player` for streaming where the player switches between resolutions based on network conditions.
 
 # Architecture
 
@@ -27,7 +27,7 @@ Let's say we have a 1080p original content `original.mp4` containing AAC audio, 
 
 We will use `ffmpeg` which is a popular tool used for transcoding.
 
-First let's walk around the info the video is having
+First let's check the video metadata
 
 ```bash
 ffmpeg -i original.mp4 -f null -
@@ -137,7 +137,7 @@ The preparation is done. Now we're going to download the Shaka packager by going
 wget https://github.com/shaka-project/shaka-packager/releases/download/v3.4.2/packager-osx-arm64
 ```
 
-After that remember to allow it to execute or you will get `permission denied` error.
+After that remember to allow it to execute or you will get a `permission denied` error.
 
 ```bash
 chmod +x ./packager-osx-arm64
@@ -201,7 +201,7 @@ Then upload all output files run by the packager
 
 ![S3 Upload](/images/Screenshot%202025-04-19%20at%2017.39.52.png)
 
-Then make this S3 host a static website by going to Properties -> Static website hosting -> Edit, and make changes as follow.
+Then make this S3 host a static website by going to Properties -> Static website hosting -> Edit, and make changes as follows.
 
 We don't have `index.html` yet, we will update it later. Right now just fill in to create a static website.
 
@@ -246,7 +246,7 @@ CloudFront is used to serve the video content over HTTPS (S3 only serve HTTP). H
 
 Go to Cloudfront -> Create distribution
 
-Origin domain -> Select your newly created S3 that host the DRM video. If a little info show up suggesting to use website endpoint. Click `Use website endpoint`.
+Origin domain -> Select your newly created S3 that host the DRM video. If a dialog box appears suggesting to use website endpoint. Click `Use website endpoint`.
 
 For `Web Application Firewall (WAF)` because this is a simple demo, I will not enable security protections. Then click on `Create distribution`. The setup will looks like this
 
