@@ -7,31 +7,24 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
-import * as prod from 'react/jsx-runtime'
+import * as prod from "react/jsx-runtime";
 
 const production = {
   Fragment: prod.Fragment,
   jsx: prod.jsx,
-  jsxs: prod.jsxs
+  jsxs: prod.jsxs,
   // sanitize: schema
-}
+};
 
 export default async function markdownToHtml(markdown: string) {
-  const file = await unified()
-    .use(remarkParse)
-    .use(remarkRehype)
-    .use(remarkFrontmatter)
-    .use(rehypeFormat)
-    .use(rehypeStringify)
-    .process(markdown)
-
   const filePreview = await unified()
-    .use(rehypeParse, { fragment: true })
-    .use(rehypeReact, production)
+    .use(remarkParse)
+    .use(remarkFrontmatter)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeFormat)
     .use(rehypeHighlight, { detect: true })
-    .process(file)
+    .use(rehypeReact, production)
+    .process(markdown);
 
-
-  // const result = await remark().use(html).process(markdown)
-  return filePreview.result
+  return filePreview.result;
 }

@@ -6,6 +6,7 @@ import {
 import markdownStyles from "./markdown-styles.module.css";
 import { Inter } from "next/font/google";
 import "github-markdown-css/github-markdown-dark.css";
+import 'highlight.js/styles/github-dark.css';
 
 const inter = Inter({ subsets: ["latin"], weight: ["700"], style: ["normal"] });
 
