@@ -1,6 +1,6 @@
 .markdown {
   @apply text-lg leading-relaxed;
-  background-color: rgb(0, 0, 0) !important;
+  background-color: #282C34 !important;
 }
 
 .markdown p,
