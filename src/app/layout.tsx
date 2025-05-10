@@ -54,11 +54,11 @@ export default function RootLayout({
         </header>
         {children}
       </body>
-      <Script
+      {/* <Script
         defer
         src="/stats/script.js"
         data-website-id="833cb692-88c7-467a-8cf7-ffec21b39bd4"
-      />
+      /> */}
     </html>
   );
 }
