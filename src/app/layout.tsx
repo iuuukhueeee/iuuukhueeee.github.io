@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -33,6 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="robots" content="index, follow" />
       <body className={inter.className}>
         <header>
           <nav className="px-4 lg:px-6 py-2.5">
