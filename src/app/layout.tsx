@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Duc Thien's blog",
   description: "Personal blogs about software development, SRE and fun.",
-  authors: [{ name: "iuuukhueeee", url: "https://iuuukhueeee.vercel.app" }],
+  authors: [{ name: "iuuukhueeee", url: "https://iuuukhueeee.github.io" }],
   creator: "iuuukhueeee",
   publisher: "iuuukhueeee",
   keywords: [
