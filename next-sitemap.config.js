@@ -2,7 +2,7 @@
 module.exports = {
   siteUrl: process.env.SITE_URL || "https://iuuukhueeee.github.io",
   generateRobotsTxt: true, // (optional)
-  outDir: "./public",
+  outDir: "./out",
   
   // ...other options
 };
