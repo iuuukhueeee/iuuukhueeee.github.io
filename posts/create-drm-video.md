@@ -1,10 +1,14 @@
 ---
-title: Create DRM video
-description: Create DRM video
+title: How do you make a DRM video
+description: How do you make a DRM video
 createdAt: 1745074766
-updatedAt: 1746633153
+updatedAt: 1747229882
 slug: create-drm-video
 ---
+
+# How do you make a DRM video
+
+_2025-04-19_
 
 # What is DRM?
 
