@@ -10,7 +10,7 @@ export default function Home() {
     <div className="container mx-auto">
       <main className="flex flex-col items-center justify-between m-12">
         <div className="text-center lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-          <ul className="max-w-md space-y-1 text-gray-900 list-none list-inside dark:text-gray-300">
+          <ul className="max-w-md space-y-1 list-none list-inside text-gray-300">
             {posts.map((post, i) => (
               <Fragment key={i}>
                 <li className="py-5">
@@ -22,10 +22,10 @@ export default function Home() {
           </ul>
         </div>
         <div className="inline-flex items-center justify-center w-full mt-10">
-          <hr className="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700" />
-          <div className="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
+          <hr className="w-64 h-1 my-8  border-0 rounded bg-gray-700" />
+          <div className="absolute px-4 -translate-x-1/2 left-1/2 bg-gray-900">
             <svg
-              className="w-4 h-4 text-gray-700 dark:text-gray-300"
+              className="w-4 h-4 text-gray-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
