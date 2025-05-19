@@ -14,11 +14,11 @@ export default async function AboutPage() {
   return (
     <>
       <Paragraph>
-        I'm Thien, a passionate hacker, inventor and software engineer. I love
+        I&apos;m Thien, a passionate hacker, inventor and software engineer. I love
         reading, especially about architecure and reverse engineering.
       </Paragraph>
       <Paragraph>
-        I've been professionally a software engineer since 2020, and I also do
+        I&apos;ve been professionally a software engineer since 2020, and I also do
         reverse engineering in my free time, as well as learn data structures
         and algorithms to improve my work.
       </Paragraph>
