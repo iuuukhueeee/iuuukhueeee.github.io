@@ -25,7 +25,7 @@ export default async function Post(props: Params) {
   return (
     <div
       className={
-        "flex justify-center items-center my-20 mx-6 md:mx-20" + inter.className
+        "flex justify-center items-center my-5 md:my-20 mx-6 md:mx-20" + inter.className
       }
     >
       <div className="w-full max-w-prose md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
