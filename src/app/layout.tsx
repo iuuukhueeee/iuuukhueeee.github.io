@@ -38,12 +38,15 @@ export default function RootLayout({
           <nav className="px-4 lg:px-6 py-2.5">
             <div className="md:flex md:flex-wrap md:justify-between items-center mx-auto max-w-screen-xl mt-5 text-gray-300">
               <Link href="/">Development, SRE and fun.</Link>
-              <div className="gap-7 flex mt-3 sm:mt-0">
+              <div className="gap-7 flex mt-8 sm:mt-0">
                 <Link href="https://x.com/iuuukhueeee" prefetch>
                   iuuukhueeee
                 </Link>
                 <Link href="https://yusou.vercel.app" prefetch>
                   Yusou 🚚
+                </Link>
+                <Link href="/aws_notes" prefetch>
+                  AWS Notes
                 </Link>
                 <Link href="/about" prefetch>
                   About
