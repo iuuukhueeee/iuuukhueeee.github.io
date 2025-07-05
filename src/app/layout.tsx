@@ -42,7 +42,7 @@ export default function RootLayout({
                 <Link href="https://x.com/iuuukhueeee" prefetch>
                   iuuukhueeee
                 </Link>
-                <Link href="https://yusou.vercel.app" prefetch>
+                <Link href="https://yusou.dev" prefetch>
                   Yusou 🚚
                 </Link>
                 <Link href="/aws_notes" prefetch>
