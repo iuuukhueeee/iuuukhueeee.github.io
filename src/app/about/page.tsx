@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Props {
   children: React.ReactNode;
 }
@@ -14,12 +16,12 @@ export default async function AboutPage() {
   return (
     <>
       <Paragraph>
-        I&apos;m Thien, a passionate hacker, inventor and software engineer. I love
-        reading, especially about architecure and reverse engineering.
+        I&apos;m Thien, a passionate hacker, inventor and software engineer. I
+        love reading, especially about architecure and reverse engineering.
       </Paragraph>
       <Paragraph>
-        I&apos;ve been professionally a software engineer since 2020, and I also do
-        reverse engineering in my free time, as well as learn data structures
+        I&apos;ve been professionally a software engineer since 2020, and I also
+        do reverse engineering in my free time, as well as learn data structures
         and algorithms to improve my work.
       </Paragraph>
       <Paragraph>
@@ -33,7 +35,14 @@ export default async function AboutPage() {
         <a href="mailto:nguyenducthien9.work@gmail.com" className="bg-red-600">
           Reach out
         </a>{" "}
-        if you want to find a way to work together!
+        if you want to find a way to work together! You can also find me at{" "}
+        <Link
+          href="https://x.com/iuuukhueeee"
+          prefetch
+          className="text-blue-300"
+        >
+          iuuukhueeee.
+        </Link>
       </Paragraph>
     </>
   );

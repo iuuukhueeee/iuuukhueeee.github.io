@@ -39,14 +39,8 @@ export default function RootLayout({
             <div className="md:flex md:flex-wrap md:justify-between items-center mx-auto max-w-screen-xl mt-5 text-gray-300">
               <Link href="/">Development, SRE and fun.</Link>
               <div className="gap-7 flex mt-8 sm:mt-0">
-                <Link href="https://x.com/iuuukhueeee" prefetch>
-                  iuuukhueeee
-                </Link>
                 <Link href="https://yusou.dev" prefetch>
                   Yusou 🚚
-                </Link>
-                <Link href="/aws_notes" prefetch>
-                  AWS Notes
                 </Link>
                 <Link href="/about" prefetch>
                   About
