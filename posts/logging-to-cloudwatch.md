@@ -377,7 +377,6 @@ _Solution:_
 
 - Check the correct AWS region (must match your EB environment region)
 - Look for log group names like: `/aws/elasticbeanstalk/your-env-name/var/log/web.stdout.log`
-- If using custom log group names, verify they're created properly
 
 ### CloudWatch Logs Insights Query Issues
 
@@ -411,20 +410,4 @@ fields @timestamp, @message
 | limit 100
 ```
 
-### Quick Diagnostic Steps
-
-When things aren't working, follow this checklist:
-
-1. **Verify basic Flask app works** - Test locally first
-2. **Check EB deployment logs** - Look for deployment errors in EB console
-3. **Confirm log streaming is enabled** - Check EB environment configuration
-4. **Test with simple log message** - Add a basic log statement and verify it appears
-5. **Check IAM permissions** - Ensure EC2 role can write to CloudWatch
-6. **Verify correct AWS region** - Logs and EB environment must be in same region
-7. **Wait and refresh** - CloudWatch can have 5-10 minute delays
-
 Most logging issues stem from configuration problems rather than code issues, so double-check your EB and CloudWatch settings first.
-
-# Cleanup
-
-Simply click on Action -> Terminate environment. You can double check navigate to EC2 service and ensure that there is no running instance.
