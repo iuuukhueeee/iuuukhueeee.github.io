@@ -12,12 +12,14 @@ export function getPostSlugs() {
   const posts = files.map((filename) => {
     const fullPath = join(postsDicr, filename)
 
+    const slugFilename = filename.replace(".md", "")
+
     const fileContents = fs.readFileSync(fullPath, 'utf-8')
 
     const { data } = matter(fileContents)
 
     return {
-      filename: filename,
+      filename: slugFilename,
       title: data.title,
       date: data.createdAt ? new Date(data.createdAt) : new Date(0)
     }
@@ -30,7 +32,8 @@ export function getPostSlugs() {
 }
 
 export async function getPostBySlug(slug: string) {
-  const fullPath = join(postsDicr, slug)
+  const fileName = slug + ".md"
+  const fullPath = join(postsDicr, fileName)
   const fileContents = fs.readFileSync(fullPath, 'utf-8')
 
   const html = await markdownToHtml(fileContents)

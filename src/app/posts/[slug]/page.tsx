@@ -54,8 +54,9 @@ type Params = {
 
 export async function generateMetadata(props: Params) {
   const { slug } = await props.params;
+  const fileName = slug + ".md"
 
-  const metadata = await getPostBySlugWithMetadata(slug);
+  const metadata = await getPostBySlugWithMetadata(fileName);
 
   return {
     title: `${metadata.title} —— iuuukhueeee`,
