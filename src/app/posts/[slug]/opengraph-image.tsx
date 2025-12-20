@@ -1,3 +1,4 @@
+import { getPostBySlugWithMetadata } from "@/app/lib/api";
 import { ImageResponse } from "next/og";
 
 export const size = {
@@ -12,24 +13,33 @@ export default async function Image({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = await fetch(`https://.../posts/${slug}`).then((res) =>
-    res.json()
-  );
+
+  const fileName = slug + ".md";
+
+  const metadata = await getPostBySlugWithMetadata(fileName);
+
+  const post = {
+    title: `${metadata.title} —— iuuukhueeee`,
+    description: metadata.description,
+  };
 
   return new ImageResponse(
     (
       <div
         style={{
-          fontSize: 48,
+          fontSize: 60,
+          color: "black",
           background: "white",
           width: "100%",
           height: "100%",
-          display: "flex",
-          alignItems: "center",
+          padding: "50px 200px",
+          textAlign: "center",
           justifyContent: "center",
+          alignItems: "center",
+          display: "flex"
         }}
       >
-        {post.title}
+        👋 {post.title}
       </div>
     ),
     {
