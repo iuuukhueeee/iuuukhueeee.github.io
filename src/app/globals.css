@@ -18,7 +18,10 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #282C34;
+  background: #282c34;
+  ul {
+    list-style-type: square;
+  }
 }
 
 @layer utilities {
