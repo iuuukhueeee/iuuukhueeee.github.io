@@ -1,6 +1,6 @@
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
-import { getPostBySlugWithMetadata } from "@/app/lib/api";
+import { getPostBySlugWithMetadata, getPostSlugs } from "@/app/lib/api";
 import { ImageResponse } from "next/og";
 
 export const size = {
@@ -8,6 +8,14 @@ export const size = {
   height: 630,
 };
 export const contentType = "image/png";
+
+export async function generateStaticParams() {
+  const slugs = getPostSlugs();
+
+  return slugs.map((slug) => ({
+    slug: slug.filename,
+  }));
+}
 
 export default async function Image({
   params,
@@ -38,7 +46,7 @@ export default async function Image({
           textAlign: "center",
           justifyContent: "center",
           alignItems: "center",
-          display: "flex"
+          display: "flex",
         }}
       >
         👋 {post.title}
