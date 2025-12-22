@@ -2,13 +2,13 @@
 title: Create Expo modules React Native
 description: Create Expo modules React Native
 createdAt: 1760972458
-updatedAt: 1760972458
+updatedAt: 1766369219
 slug: create-epxo-modules-react-native
 ---
 
 # Native modules for React Native
 
-**Reviewed by Mike Grabowski, and Michał Pierzchała from Callstack.**
+**Reviewed by Mike Grabowski, and Michał Pierzchała at Callstack.**
 
 React Native was released 2015 and been evolving since then, it is one of the most impacted technology that Meta released.
 
