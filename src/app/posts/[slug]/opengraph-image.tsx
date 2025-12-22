@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import { getPostBySlugWithMetadata } from "@/app/lib/api";
 import { ImageResponse } from "next/og";
 
