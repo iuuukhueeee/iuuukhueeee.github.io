@@ -33,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <meta name="robots" content="index, follow" />
+      <meta name="google-site-verification" content="p3HZuHH7HXMmZUk-zlxY_wj0F-Wy5HvVklw-SDH5IqQ" />
       <body className={inter.className}>
         <header>
           <nav className="px-4 lg:px-6 py-2.5">
