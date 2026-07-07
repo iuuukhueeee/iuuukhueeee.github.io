@@ -382,4 +382,4 @@ Building react native apps from scratch takes a lot of effort to write native mo
 
 But by writing apps in both JavaScript and native, it can truly unlock the potential of talents where teams can work across different platforms.
 
-A public repo of this blog can be found here: <a href="https://github.com/iuuukhueeee/demo-expo-modules">https://github.com/iuuukhueeee/demo-expo-modules</a>.
+A public repo of this blog can be found here: <a href="https://github.com/hl11jp/demo-expo-modules">https://github.com/hl11jp/demo-expo-modules</a>.

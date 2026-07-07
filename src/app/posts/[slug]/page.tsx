@@ -59,7 +59,7 @@ export async function generateMetadata(props: Params) {
   const metadata = await getPostBySlugWithMetadata(fileName);
 
   return {
-    title: `${metadata.title} —— iuuukhueeee`,
+    title: `${metadata.title} —— hl11jp`,
     description: metadata.description,
   };
 }

@@ -37,11 +37,11 @@ export default async function AboutPage() {
         </a>{" "}
         if you want to find a way to work together! You can also find me at{" "}
         <Link
-          href="https://x.com/iuuukhueeee"
+          href="https://x.com/hl11jp"
           prefetch
           className="text-blue-300"
         >
-          iuuukhueeee.
+          hl11jp.
         </Link>
       </Paragraph>
     </>

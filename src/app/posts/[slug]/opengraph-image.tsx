@@ -29,7 +29,7 @@ export default async function Image({
   const metadata = await getPostBySlugWithMetadata(fileName);
 
   const post = {
-    title: `${metadata.title} —— iuuukhueeee`,
+    title: `${metadata.title} —— hl11jp`,
     description: metadata.description,
   };
 

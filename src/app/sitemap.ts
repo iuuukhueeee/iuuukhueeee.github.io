@@ -9,7 +9,7 @@ export default function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = getAllPosts();
 
   const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
-    url: `https://iuuukhueeee.github.io/posts/${post.filename}`,
+    url: `https://hl11jp.github.io/posts/${post.filename}`,
     lastModified: post.date,
   }))
   return Promise.resolve([...defaultPages, ...blogPages]);
